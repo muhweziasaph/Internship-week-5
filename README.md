@@ -17,14 +17,15 @@ CRUD API for Blog or Contacts Management Application
 - Postman (for API testing)
 ## How to View the Project
 in command line ,
-1. Clone the repository:git clone <repository_url>
-2. Navigate project directory:cd week5-backend
-3. install dependencies:npm install
-4. Set up your MongoDB connection string in a .env file:MONGODB_URI=your_mongodb_connection_string
-5. Start the server:npm start
-6. Use Postman or any API client to test the endpoints:
--GET /api/contacts — retrieve all contacts
--POST /api/contacts — create a new contact
--PUT /api/contacts/:id — update a contact by ID
--DELETE /api/contacts/:id — delete a contact by ID
-
+1. **Clone the repository**:git clone https://github.com/muhweziasaph/Internship-week-5.git
+2. **Navigate project directory**:cd week5-backend
+3. **install dependencies**:npm install
+4. **Set up your MongoDB connection string in a .env file**:MONGODB_URI=your_mongodb_connection_string
+5. **Start the server**:npm start
+6. **Use Postman or any API client to test the endpoints**:
+- GET /api/contacts — retrieve all contacts
+- POST /api/contacts — create a new contact
+- PUT /api/contacts/:id — update a contact by ID
+- DELETE /api/contacts/:id — delete a contact by ID
+## Author 
+MUHWEZI ASAPH, BACHELOR OF SCIENCE COMPUTER SCIENCE STUDENT UTAMU
