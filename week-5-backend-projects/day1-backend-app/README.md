@@ -14,18 +14,21 @@
    - node -v
    - npm -v
 
-2. **clone the repository and navigate the folder**:
-3. **Install dependencies**:
+2. **clone the repository and navigate the folder**
+   - git clone https://github.com/muhweziasaph/Internship-week-5.git
+   - cd 
+4. **Install dependencies**:
    - npm install express
-4. **Start the server**:
+5. **Start the server**:
    - node server.js
-5. **you should see**:
+6. **you should see**:
    - Server running on http://localhost:3000
-6. **Test in your browser**:
+7. **Test in your browser**:
    - Visit http://localhost:3000
    - you should see:
 Hello World from Bookstore API
    - Visit http://localhost:3000/books
    - you should see a list of books in JSON
-7. Test API with  Postman or any other API tools 
+8. Test API with  Postman or any other API tools 
    - Use GET, POST, and DELETE methods on the /books endpoint to interact with the API
+
