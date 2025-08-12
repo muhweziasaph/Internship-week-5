@@ -16,7 +16,7 @@
 
 2. **clone the repository and navigate the folder**
    - git clone https://github.com/muhweziasaph/Internship-week-5.git
-   - cd 
+   - cd week-5-backend-projects/day1-backend-app
 4. **Install dependencies**:
    - npm install express
 5. **Start the server**:
@@ -31,4 +31,5 @@ Hello World from Bookstore API
    - you should see a list of books in JSON
 8. Test API with  Postman or any other API tools 
    - Use GET, POST, and DELETE methods on the /books endpoint to interact with the API
+
 
