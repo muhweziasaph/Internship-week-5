@@ -4,7 +4,7 @@ const bookSchema = new mongoose.Schema(
   {
     _id : {
      type: Number,
-      required: [true, 'Published year is required'], 
+      required: [true, '_id is required'], 
    },
     title: {
       type: String,
@@ -29,7 +29,6 @@ const bookSchema = new mongoose.Schema(
       enum: ['Fiction', 'Non-fiction', 'Biography', 'Science', 'Fantasy', 'Other'],
       default: 'Other',
     },
-  },
-  { timestamps: true }
 );
+
 module.exports = mongoose.model('Book', bookSchema);
