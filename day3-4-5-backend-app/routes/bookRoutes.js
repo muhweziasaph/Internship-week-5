@@ -14,7 +14,7 @@ router.post('/', async (req, res, next) => {
 // READ all books
 router.get('/', async (req, res, next) => {
   try {
-    const books = await Book.find().sort({ createdAt: -1 });
+    const books = await Book.find();
     return res.status(200).json(books); // 200 OK
   } catch (err) {
     return next(err);
@@ -54,3 +54,4 @@ router.delete('/:id', async (req, res, next) => {
   }
 });
 module.exports = router;
+
