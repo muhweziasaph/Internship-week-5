@@ -30,7 +30,12 @@ const bookSchema = new mongoose.Schema(
       default: 'Other',
     },
   },
+  bookSchema.set('toJSON' , {
+    transform: (doc, ret) => {
+      delete ret.createdAt;
+      delete ret.updatedAt;
+      return ret;
+    }
+  });
 );
 module.exports = mongoose.model('Book', bookSchema);
-
-
