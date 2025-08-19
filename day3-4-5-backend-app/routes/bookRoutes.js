@@ -36,10 +36,7 @@ router.get('/:id', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const {title, author, publishedyear, genre } = req.body;
-    const updated = await Book.findByIdAndUpdate(req.params.id, {title, author, publishedyear, genre }, {
-      new: true,
-      runValidators: true, // important to re-validate on updates
-    });
+    const book = await book.findByIdAndUpdate(req.params.id, {title, author, publishedyear, genre },{new: true, runValidators: true });
     if (!updated) return res.status(404).json({ message: 'Book not found' }); // 404
     return res.status(200).json(updated); // 200 OK
   } catch (err) {
@@ -57,5 +54,6 @@ router.delete('/:id', async (req, res, next) => {
   }
 });
 module.exports = router;
+
 
 
