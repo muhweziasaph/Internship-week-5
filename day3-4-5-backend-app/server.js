@@ -42,7 +42,7 @@ app.get('/', (req, res) => res.send('Bookstore API is running'));
 // Quick test route to fetch all books
 app.get('/books', async (req, res) => {
   try {
-    const books = await Book.find();
+    const books = await Book.find().sort({ createdAt: -1 });
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch books" });
@@ -52,7 +52,7 @@ app.get('/books', async (req, res) => {
 app.use('/api/books', bookRoutes);
 // Custom error handler (keep LAST)
 app.use(errorHandler);
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 // Start server + seed DB
 app.listen(PORT,'0.0.0.0', async () => {
   console.log(`Server running on http://localhost:${PORT}`);
