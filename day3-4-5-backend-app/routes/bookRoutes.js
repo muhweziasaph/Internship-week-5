@@ -5,9 +5,7 @@ const Book = require('../models/Book');
 // CREATE a book
 router.post('/', async (req, res, next) => {
   try {
-    const {_id, title, author, publishedyear, genre } = req.body;
-    const book = book({_id, title, author, publishedyear, genre});
-    await book.create();
+    const book = await Book.create(req.body);
     return res.status(201).json(book); // 201 Created
   } catch (err) {
     return next(err); // handled by error middleware
@@ -35,8 +33,10 @@ router.get('/:id', async (req, res, next) => {
 // UPDATE a book
 router.put('/:id', async (req, res, next) => {
   try {
-    const {title, author, publishedyear, genre } = req.body;
-    const book = await book.findByIdAndUpdate(req.params.id, {title, author, publishedyear, genre },{new: true, runValidators: true });
+    const updated = await Book.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true, // important to re-validate on updates
+    });
     if (!updated) return res.status(404).json({ message: 'Book not found' }); // 404
     return res.status(200).json(updated); // 200 OK
   } catch (err) {
@@ -54,6 +54,7 @@ router.delete('/:id', async (req, res, next) => {
   }
 });
 module.exports = router;
+
 
 
 
