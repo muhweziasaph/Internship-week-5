@@ -1,19 +1,15 @@
 // config/db.js
 const mongoose = require('mongoose');
-
 async function connectDB() {
-  // Select mode from .env (default to local if not set)
-  const mode = process.env.DB_MODE === 'atlas' ? 'atlas' : 'local';
-
-  // Pick URI depending on mode
+  // Use Atlas if running in production, otherwise fallback to local
+  const mode = process.env.NODE_ENV === 'production' ? 'atlas' : 'local';
+  // Select URI based on mode
   const uri =
     mode === 'atlas' ? process.env.MONGO_URI_ATLAS : process.env.MONGO_URI_LOCAL;
-
   if (!uri) {
-    console.error(`Missing MongoDB URI for ${mode} mode!`);
+    console.error('Missing MongoDB URI for the selected mode!');
     process.exit(1);
   }
-
   try {
     await mongoose.connect(uri, {
       useNewUrlParser: true,
