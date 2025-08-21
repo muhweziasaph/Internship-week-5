@@ -36,7 +36,44 @@
 8.it will run locally on http://localhost:5000 and the books can be visible at http://localhost:5000/api/books in the browser. when you check in the database ,bookstore database has to be created with one collection of books.
 8. Test API in Postman:
 - to read all books: GET http://localhost:5000/api/books
+     - remember to remain in params
 - to read one: GET http://localhost:5000/api/books/book id
-- to update: PUT http://localhost:5000/api/books/book id
+     - remember to remain in params
 - to delete: DELETE http://localhost:5000/api/books/book id
+     - remember to remain in params
+- to update: PUT http://localhost:5000/api/books/book id
+     - remember to go to body, set to raw then json. then post the book you intend to replace in json format and ensure that the id captured is the same as the book you intend to replace.
 - to create: POST http://localhost:5000/books and in the body,set to raw then choose json  and then put details of the book to add in json format.
+     - remember to go to body, set to raw then json. then post the book you intend to replace in json format and ensure that the id captured is the same as the book you intend to replace.
+  ## How i deployed it on render and test API
+1. created n account on render:render.com
+2. signed in with my github
+3. authorised render to access my repos
+4. created new web service from render dashboard: clicked new + webservice
+5. filled details:
+   - name: named by project
+   - language: node
+   -  branch: main
+   -  region: oregon (us west)
+   -  roor directory: day3-4-5-backend-app(folder of my app to deploy) with in a repository
+   -  build command: npm install
+   -   start command: npm start
+   -   instance i choose hobby projects free version
+   -   environmental variables:
+        -variable: NODE_ENV  , value: production
+        -variable: MONGO_URI_ATLAS , value : my atlas mongodb connection string
+   - deployed the web service.
+   - after deployment
+        - running on  https://internship-week-5-backend-app.onrender.com
+        - to see books in the browser https://internship-week-5-backend-app.onrender.com/api/books
+6. Testing API in Postman:
+  - to read all books: GET https://internship-week-5-backend-app.onrender.com/api/books
+        - remember to remain in params
+  - to read one: GET https://internship-week-5-backend-app.onrender.com/api/books/book id
+        - remember to remain in params
+  - to delete: DELETE https://internship-week-5-backend-app.onrender.com/api/books/book id
+        - remember to remain in params
+  - to update: PUT https://internship-week-5-backend-app.onrender.com/api/books/book id
+        - remember to go to body, set to raw then json. then post the book you intend to replace in json format and ensure that the id captured is the same as the book you intend to replace.
+  - to create: POST  https://internship-week-5-backend-app.onrender.com/api/books
+       - remember to go to body, set to raw then json. then post the book you intend to replace in json format and ensure that the id captured is the same as the book you intend to replace.
