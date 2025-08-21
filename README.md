@@ -22,7 +22,7 @@ in command line ,
 3. **follow readme.md in the respective directory to understand the details of each folder's project and how to test API**
 ## The link to the deployed week-5 project on render
 - Server running on [ https://internship-week-5-backend-app.onrender.com](https://internship-week-5-backend-app.onrender.com)
-- to see books in the database browse 
+- to see books in the database browse https://internship-week-5-backend-app.onrender.com/api/books 
 - to test API of the project in Postman:
     - to read all books: GET https://internship-week-5-backend-app.onrender.com/api/books
          - remember to remain in params
