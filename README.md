@@ -21,8 +21,8 @@ in command line ,
 2. **Navigate project directory**:e.g cd C:\Users\LENOVO\Desktop\day3-4-5-backend-app or C:\Users\LENOVO\Desktop\day1and2-backend-app
 3. **follow readme.md in the respective directory to understand the details of each folder's project and how to test API**
 ## The link to the deployed week-5 project on render
-- Server running on  https://internship-week-5-backend-app.onrender.com
-- to see books in the database browse https://internship-week-5-backend-app.onrender.com/api/books
+- Server running on [ https://internship-week-5-backend-app.onrender.com](https://internship-week-5-backend-app.onrender.com)
+- to see books in the database browse 
 - to test API of the project in Postman:
     - to read all books: GET https://internship-week-5-backend-app.onrender.com/api/books
          - remember to remain in params
